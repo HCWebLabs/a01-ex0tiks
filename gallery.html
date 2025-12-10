@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery | a01.ex0tiks</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/gallery.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Noise Overlay -->
+    <div class="noise-overlay"></div>
+    
+    <!-- Floating Elements -->
+    <div class="floating-elements" aria-hidden="true">
+        <span class="floater flower">✿</span>
+        <span class="floater star">★</span>
+        <span class="floater flower">❀</span>
+        <span class="floater star">✦</span>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="main-nav">
+        <a href="index.html" class="nav-logo">a01.ex0tiks</a>
+        <button class="nav-toggle" aria-label="Toggle menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="gallery.html" class="active">Gallery</a></li>
+            <li><a href="shop.html">Shop</a></li>
+            <li><a href="commissions.html">Commissions</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="page-header">
+        <h1>The Gallery</h1>
+        <p>Every piece tells a story. What's yours?</p>
+    </header>
+
+    <!-- Filter Bar -->
+    <section class="filter-section">
+        <div class="filter-bar">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="nostalgia">Nostalgia</button>
+            <button class="filter-btn" data-filter="trippy">Trippy</button>
+            <button class="filter-btn" data-filter="tarot">Tarot</button>
+            <button class="filter-btn" data-filter="glitch">Glitch</button>
+            <button class="filter-btn" data-filter="custom">Custom</button>
+        </div>
+    </section>
+
+    <!-- Gallery Grid -->
+    <main class="gallery-section">
+        <div class="gallery-grid">
+            <!-- Real Art Pieces -->
+            <article class="gallery-item" data-category="glitch">
+                <div class="item-frame">
+                    <img src="images/art-1.png" alt="Sit & Twist - TV test pattern inspired artwork">
+                    <div class="item-overlay">
+                        <span class="view-icon">👁</span>
+                    </div>
+                </div>
+                <div class="item-info">
+                    <h3>Sit & Twist</h3>
+                    <span class="item-tag">Glitch</span>
+                </div>
+            </article>
+
+            <article class="gallery-item" data-category="nostalgia">
+                <div class="item-frame">
+                    <img src="images/art-2.png" alt="Bikini Bottom Window - SpongeBob inspired artwork">
+                    <div class="item-overlay">
+                        <span class="view-icon">👁</span>
+                    </div>
+                </div>
+                <div class="item-info">
+                    <h3>Bikini Bottom Window</h3>
+                    <span class="item-tag">Nostalgia</span>
+                </div>
+            </article>
+
+            <article class="gallery-item" data-category="tarot">
+                <div class="item-frame">
+                    <img src="images/art-3.png" alt="The Finger - Tarot card style artwork">
+                    <div class="item-overlay">
+                        <span class="view-icon">👁</span>
+                    </div>
+                </div>
+                <div class="item-info">
+                    <h3>The Finger</h3>
+                    <span class="item-tag">Tarot</span>
+                </div>
+            </article>
+
+            <article class="gallery-item" data-category="trippy">
+                <div class="item-frame">
+                    <img src="images/art-4.png" alt="Lizzie's Day Off - Trippy cartoon artwork">
+                    <div class="item-overlay">
+                        <span class="view-icon">👁</span>
+                    </div>
+                </div>
+                <div class="item-info">
+                    <h3>Lizzie's Day Off</h3>
+                    <span class="item-tag">Trippy</span>
+                </div>
+            </article>
+
+            <!-- Placeholder Items for Future Art -->
+            <article class="gallery-item placeholder" data-category="nostalgia">
+                <div class="item-frame">
+                    <div class="placeholder-art">
+                        <span>✿</span>
+                        <p>Coming Soon</p>
+                    </div>
+                    <div class="item-overlay">
+                        <span class="view-icon">👁</span>
+                    </div>
+                </div>
+                <div class="item-info">
+                    <h3>Untitled</h3>
+                    <span class="item-tag">Nostalgia</span>
+                </div>
+            </article>
+
+            <article class="gallery-item placeholder" data-category="trippy">
+                <div class="item-frame">
+                    <div class="placeholder-art">
+                        <span>★</span>
+                        <p>Coming Soon</p>
+                    </div>
+                    <div class="item-overlay">
+                        <span class="view-icon">👁</span>
+                    </div>
+                </div>
+                <div class="item-info">
+                    <h3>Untitled</h3>
+                    <span class="item-tag">Trippy</span>
+                </div>
+            </article>
+
+            <article class="gallery-item placeholder" data-category="custom">
+                <div class="item-frame">
+                    <div class="placeholder-art">
+                        <span>❀</span>
+                        <p>Coming Soon</p>
+                    </div>
+                    <div class="item-overlay">
+                        <span class="view-icon">👁</span>
+                    </div>
+                </div>
+                <div class="item-info">
+                    <h3>Untitled</h3>
+                    <span class="item-tag">Custom</span>
+                </div>
+            </article>
+
+            <article class="gallery-item placeholder" data-category="tarot">
+                <div class="item-frame">
+                    <div class="placeholder-art">
+                        <span>✦</span>
+                        <p>Coming Soon</p>
+                    </div>
+                    <div class="item-overlay">
+                        <span class="view-icon">👁</span>
+                    </div>
+                </div>
+                <div class="item-info">
+                    <h3>Untitled</h3>
+                    <span class="item-tag">Tarot</span>
+                </div>
+            </article>
+        </div>
+    </main>
+
+    <!-- Lightbox -->
+    <div id="lightbox" class="lightbox">
+        <button class="lightbox-close" aria-label="Close lightbox">&times;</button>
+        <div class="lightbox-content">
+            <img id="lightbox-img" src="" alt="">
+            <h3 id="lightbox-title"></h3>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <span class="footer-logo">a01.ex0tiks</span>
+                <p>Art by Ginger</p>
+            </div>
+            <div class="footer-links">
+                <a href="https://instagram.com/a01.ex0tiks" target="_blank" rel="noopener noreferrer" class="social-link">
+                    <span class="social-icon">📷</span> Instagram
+                </a>
+            </div>
+            <div class="footer-copy">
+                <p>&copy; 2025 a01.ex0tiks. All rights reserved.</p>
+            </div>
+        </div>
+        <div class="footer-squiggle"></div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/gallery.js"></script>
+</body>
+</html>

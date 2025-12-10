@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Commissions | a01.ex0tiks</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/commissions.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Noise Overlay -->
+    <div class="noise-overlay"></div>
+    
+    <!-- Floating Elements -->
+    <div class="floating-elements" aria-hidden="true">
+        <span class="floater flower">✿</span>
+        <span class="floater star">★</span>
+        <span class="floater flower">❀</span>
+        <span class="floater star">✦</span>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="main-nav">
+        <a href="index.html" class="nav-logo">a01.ex0tiks</a>
+        <button class="nav-toggle" aria-label="Toggle menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="shop.html">Shop</a></li>
+            <li><a href="commissions.html" class="active">Commissions</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="page-header">
+        <h1>Commissions</h1>
+        <p>Your vision. My hands. Let's make something wild.</p>
+    </header>
+
+    <main class="commission-page">
+        <!-- How It Works Section -->
+        <section class="how-it-works">
+            <h2>How It Works</h2>
+            <div class="steps-grid">
+                <div class="step">
+                    <span class="step-number">01</span>
+                    <h3>Tell Me Your Idea</h3>
+                    <p>Fill out the form below with your vision. The weirder, the better. Include any references or vibes you're going for.</p>
+                </div>
+                <div class="step">
+                    <span class="step-number">02</span>
+                    <h3>We Chat</h3>
+                    <p>I'll hit you back within a few days to talk details, pricing, and timeline. We'll make sure we're on the same page.</p>
+                </div>
+                <div class="step">
+                    <span class="step-number">03</span>
+                    <h3>I Create</h3>
+                    <p>Once we agree on everything, I get to work. You'll get progress updates so you can see your piece come to life.</p>
+                </div>
+                <div class="step">
+                    <span class="step-number">04</span>
+                    <h3>You Receive</h3>
+                    <p>Your one-of-a-kind, hand-painted original arrives at your door. Frame it, flex it, love it.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pricing Info -->
+        <section class="pricing-info">
+            <div class="pricing-content">
+                <h2>Pricing</h2>
+                <p>Every commission is unique, so pricing depends on size, complexity, and how many fever-dream details you want packed in there.</p>
+                <div class="price-ranges">
+                    <div class="price-item">
+                        <span class="size">Small (8x10)</span>
+                        <span class="price">$60 - $100</span>
+                    </div>
+                    <div class="price-item">
+                        <span class="size">Medium (11x14)</span>
+                        <span class="price">$100 - $175</span>
+                    </div>
+                    <div class="price-item">
+                        <span class="size">Large (16x20+)</span>
+                        <span class="price">$175+</span>
+                    </div>
+                </div>
+                <p class="pricing-note">* Prices are estimates. Final quote provided after consultation.</p>
+            </div>
+        </section>
+
+        <!-- Commission Form -->
+        <section class="commission-form-section">
+            <h2>Submit Your Idea</h2>
+            <form id="commission-form" class="commission-form">
+                <div class="form-group">
+                    <label for="name">Your Name *</label>
+                    <input type="text" id="name" name="name" required placeholder="What should I call you?">
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Your Email *</label>
+                    <input type="email" id="email" name="email" required placeholder="So I can get back to you">
+                </div>
+
+                <div class="form-group">
+                    <label for="size">Preferred Size</label>
+                    <select id="size" name="size">
+                        <option value="">Not sure yet</option>
+                        <option value="small">Small (8x10)</option>
+                        <option value="medium">Medium (11x14)</option>
+                        <option value="large">Large (16x20)</option>
+                        <option value="custom">Custom size</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="budget">Budget Range</label>
+                    <select id="budget" name="budget">
+                        <option value="">Let's talk about it</option>
+                        <option value="under100">Under $100</option>
+                        <option value="100-175">$100 - $175</option>
+                        <option value="175-250">$175 - $250</option>
+                        <option value="250plus">$250+</option>
+                    </select>
+                </div>
+
+                <div class="form-group full-width">
+                    <label for="description">Describe Your Vision *</label>
+                    <textarea id="description" name="description" rows="6" required placeholder="What do you see in your head? A character? A vibe? A color scheme? Tell me everything. The more details, the better I can bring it to life."></textarea>
+                </div>
+
+                <div class="form-group full-width">
+                    <label for="references">Reference Links (optional)</label>
+                    <textarea id="references" name="references" rows="3" placeholder="Drop any links to images, Pinterest boards, or whatever inspires your idea. Separate multiple links with commas."></textarea>
+                </div>
+
+                <div class="form-group full-width">
+                    <label for="timeline">Timeline</label>
+                    <input type="text" id="timeline" name="timeline" placeholder="Need it by a certain date? (birthdays, gifts, etc.)">
+                </div>
+
+                <div class="form-group full-width checkbox-group">
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="agree" name="agree" required>
+                        <span class="checkbox-custom"></span>
+                        <span class="checkbox-text">I understand this is a custom piece and final artwork may vary from initial concept</span>
+                    </label>
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-large">Send It!</button>
+            </form>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="faq-section">
+            <h2>Questions?</h2>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <h3>How long does a commission take?</h3>
+                    <p>Usually 2-4 weeks depending on complexity and my current queue. Rush orders can sometimes be arranged — just ask!</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Do you ship?</h3>
+                    <p>Yep! Shipping costs depend on your location and will be added to the final price. Local pickup in East Tennessee is also an option.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>What if I don't like it?</h3>
+                    <p>I send progress pics throughout so we can catch any issues early. Revisions within the original scope are included!</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Do you do prints?</h3>
+                    <p>Nope — every piece is a hand-painted original. That's what makes it special.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <span class="footer-logo">a01.ex0tiks</span>
+                <p>Art by Ginger</p>
+            </div>
+            <div class="footer-links">
+                <a href="https://instagram.com/a01.ex0tiks" target="_blank" rel="noopener noreferrer" class="social-link">
+                    <span class="social-icon">📷</span> Instagram
+                </a>
+            </div>
+            <div class="footer-copy">
+                <p>&copy; 2025 a01.ex0tiks. All rights reserved.</p>
+            </div>
+        </div>
+        <div class="footer-squiggle"></div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

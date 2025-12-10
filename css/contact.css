@@ -8,7 +8,7 @@
     text-align: center;
     background: 
         linear-gradient(180deg, rgba(10, 10, 10, 0.85) 0%, rgba(20, 20, 20, 0.95) 100%),
-        url('images/bg-texture.jpg');
+        url('../images/bg-texture.jpg');
     background-size: cover;
     background-position: center;
     position: relative;
@@ -21,8 +21,8 @@
     left: 0;
     right: 0;
     height: 3px;
-    background: linear-gradient(90deg, var(--neon-pink), var(--neon-yellow));
-    box-shadow: 0 0 15px var(--neon-pink);
+    background: linear-gradient(90deg, var(--neon-lime), var(--neon-yellow));
+    box-shadow: 0 0 15px var(--neon-lime);
 }
 
 .page-header h1 {
@@ -100,13 +100,13 @@
 
 .contact-card:hover {
     transform: translate(-4px, -4px);
-    border-color: var(--neon-pink);
-    box-shadow: 6px 6px 0 var(--neon-pink);
+    border-color: var(--neon-lime);
+    box-shadow: 6px 6px 0 var(--neon-lime);
 }
 
 .contact-card.instagram:hover {
-    border-color: var(--neon-cyan);
-    box-shadow: 6px 6px 0 var(--neon-cyan);
+    border-color: var(--neon-teal);
+    box-shadow: 6px 6px 0 var(--neon-teal);
 }
 
 .contact-card.commissions:hover {
@@ -135,7 +135,7 @@
 
 .contact-detail {
     font-size: var(--text-sm);
-    color: var(--neon-cyan);
+    color: var(--neon-teal);
     margin-bottom: var(--space-sm);
     word-break: break-all;
 }
@@ -228,7 +228,7 @@
 .vibe-check-section {
     padding: var(--space-xl);
     background: var(--charcoal);
-    border: 2px solid var(--neon-cyan);
+    border: 2px solid var(--neon-teal);
 }
 
 .vibe-check-section h2 {

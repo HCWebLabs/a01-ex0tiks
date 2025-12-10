@@ -8,7 +8,7 @@
     text-align: center;
     background: 
         linear-gradient(180deg, rgba(10, 10, 10, 0.85) 0%, rgba(20, 20, 20, 0.95) 100%),
-        url('images/bg-texture.jpg');
+        url('../images/bg-texture.jpg');
     background-size: cover;
     background-position: center;
     position: relative;
@@ -21,7 +21,7 @@
     left: 0;
     right: 0;
     height: 3px;
-    background: linear-gradient(90deg, var(--neon-yellow), var(--neon-pink));
+    background: linear-gradient(90deg, var(--neon-yellow), var(--neon-lime));
     box-shadow: 0 0 15px var(--neon-yellow);
 }
 
@@ -178,9 +178,9 @@
 .sold-overlay span {
     font-family: var(--font-stencil);
     font-size: var(--text-2xl);
-    color: var(--neon-pink);
+    color: var(--neon-lime);
     transform: rotate(-15deg);
-    text-shadow: 0 0 20px var(--neon-pink);
+    text-shadow: 0 0 20px var(--neon-lime);
 }
 
 /* Card Details */
@@ -327,14 +327,14 @@
 }
 
 .info-card a {
-    color: var(--neon-cyan);
+    color: var(--neon-teal);
     text-decoration: none;
     transition: var(--transition-base);
 }
 
 .info-card a:hover {
-    color: var(--neon-pink);
-    text-shadow: 0 0 10px var(--neon-pink);
+    color: var(--neon-lime);
+    text-shadow: 0 0 10px var(--neon-lime);
 }
 
 /* --------------------- Shop CTA --------------------- */
@@ -342,7 +342,7 @@
     padding: var(--space-2xl) var(--space-md);
     text-align: center;
     background: var(--black);
-    border-top: 3px solid var(--neon-cyan);
+    border-top: 3px solid var(--neon-teal);
 }
 
 .shop-cta h2 {

@@ -8,7 +8,7 @@
     text-align: center;
     background: 
         linear-gradient(180deg, rgba(10, 10, 10, 0.9) 0%, rgba(20, 20, 20, 0.95) 100%),
-        url('images/bg-corridor.jpg');
+        url('../images/bg-corridor.jpg');
     background-size: cover;
     background-position: center;
     position: relative;
@@ -21,8 +21,8 @@
     left: 0;
     right: 0;
     height: 3px;
-    background: linear-gradient(90deg, var(--neon-pink), var(--neon-cyan));
-    box-shadow: 0 0 20px var(--neon-pink);
+    background: linear-gradient(90deg, var(--neon-lime), var(--neon-teal));
+    box-shadow: 0 0 20px var(--neon-lime);
 }
 
 .page-header h1 {
@@ -73,13 +73,13 @@
 }
 
 .filter-btn:hover {
-    border-color: var(--neon-cyan);
-    color: var(--neon-cyan);
+    border-color: var(--neon-teal);
+    color: var(--neon-teal);
 }
 
 .filter-btn.active {
-    background: var(--neon-pink);
-    border-color: var(--neon-pink);
+    background: var(--neon-lime);
+    border-color: var(--neon-lime);
     color: var(--black);
 }
 
@@ -134,9 +134,9 @@
 }
 
 .gallery-item:hover .item-frame {
-    border-color: var(--neon-pink);
+    border-color: var(--neon-lime);
     box-shadow: 
-        6px 6px 0 var(--neon-pink),
+        6px 6px 0 var(--neon-lime),
         0 0 30px rgba(255, 45, 106, 0.15);
 }
 
@@ -203,7 +203,7 @@
     text-transform: uppercase;
     letter-spacing: 0.15em;
     color: var(--black);
-    background: var(--neon-cyan);
+    background: var(--neon-teal);
     padding: 0.15em 0.6em;
 }
 
@@ -287,8 +287,8 @@
 }
 
 .lightbox-close:hover {
-    color: var(--neon-pink);
-    text-shadow: 0 0 15px var(--neon-pink);
+    color: var(--neon-lime);
+    text-shadow: 0 0 15px var(--neon-lime);
 }
 
 .lightbox-content {
@@ -309,7 +309,7 @@
     object-fit: contain;
     border: 3px solid var(--grey-mid);
     box-shadow: 
-        8px 8px 0 var(--neon-pink),
+        8px 8px 0 var(--neon-lime),
         0 0 50px rgba(255, 45, 106, 0.2);
 }
 

@@ -8,7 +8,7 @@
     text-align: center;
     background: 
         linear-gradient(180deg, rgba(10, 10, 10, 0.85) 0%, rgba(20, 20, 20, 0.95) 100%),
-        url('images/bg-corridor.jpg');
+        url('../images/bg-corridor.jpg');
     background-size: cover;
     background-position: center;
     position: relative;
@@ -21,7 +21,7 @@
     left: 0;
     right: 0;
     height: 3px;
-    background: linear-gradient(90deg, var(--neon-green), var(--neon-cyan));
+    background: linear-gradient(90deg, var(--neon-green), var(--neon-teal));
     box-shadow: 0 0 15px var(--neon-green);
 }
 
@@ -84,7 +84,7 @@
     left: 6px;
     right: -6px;
     bottom: -6px;
-    background: var(--neon-pink);
+    background: var(--neon-lime);
     z-index: -1;
 }
 
@@ -130,7 +130,7 @@
 
 .bio-text .lead {
     font-size: var(--text-lg);
-    color: var(--neon-cyan);
+    color: var(--neon-teal);
     margin-bottom: var(--space-md);
     font-weight: 700;
 }
@@ -143,16 +143,16 @@
 }
 
 .bio-text .highlight {
-    color: var(--neon-pink);
+    color: var(--neon-lime);
     font-weight: 700;
-    text-shadow: 0 0 10px var(--neon-pink);
+    text-shadow: 0 0 10px var(--neon-lime);
 }
 
 /* --------------------- Vibe Section --------------------- */
 .vibe-section-about {
     padding: var(--space-xl);
     background: var(--charcoal);
-    border: 2px solid var(--neon-cyan);
+    border: 2px solid var(--neon-teal);
 }
 
 .vibe-section-about h2 {
@@ -191,8 +191,8 @@
 }
 
 .vibe-item:hover {
-    border-color: var(--neon-pink);
-    box-shadow: 4px 4px 0 var(--neon-pink);
+    border-color: var(--neon-lime);
+    box-shadow: 4px 4px 0 var(--neon-lime);
     transform: translate(-2px, -2px);
 }
 
@@ -226,8 +226,8 @@
     padding: var(--space-2xl) var(--space-md);
     text-align: center;
     background: var(--concrete);
-    border-left: 4px solid var(--neon-pink);
-    border-right: 4px solid var(--neon-cyan);
+    border-left: 4px solid var(--neon-lime);
+    border-right: 4px solid var(--neon-teal);
 }
 
 .quote-section blockquote {
@@ -247,7 +247,7 @@
     text-align: center;
     padding: var(--space-xl);
     background: var(--charcoal);
-    border-top: 3px solid var(--neon-pink);
+    border-top: 3px solid var(--neon-lime);
 }
 
 .about-cta h2 {

@@ -5,27 +5,26 @@
 
 /* --------------------- CSS Variables --------------------- */
 :root {
-    /* Grunge Color Palette - Dark & Desaturated with Neon Pops */
+    /* Grunge Color Palette - Dark base with COOL Neon Pops */
     --black: #0A0A0A;
     --charcoal: #141414;
     --concrete: #1E1E1E;
-    --rust: #2A2420;
     --grey-dark: #2D2D2D;
     --grey-mid: #4A4A4A;
-    --grey-light: #6B6B6B;
-    --off-white: #E8E4E0;
-    --cream: #D4CFC7;
+    --grey-light: #7A7A7A;
+    --off-white: #E8E6E0;
+    --cream: #D4D2C8;
     
-    /* Neon Accent Pops - Like spray paint on concrete */
-    --neon-pink: #FF2D6A;
-    --neon-cyan: #00F0FF;
-    --neon-yellow: #E8FF00;
-    --neon-green: #39FF14;
-    --neon-orange: #FF6B00;
+    /* COOL Neon Pops - Limes, Greens, Teals, Blues, Yellows */
+    --neon-lime: #39FF14;
+    --neon-green: #00FF66;
+    --neon-teal: #00FFD1;
+    --neon-blue: #00D4FF;
+    --neon-yellow: #DFFF00;
     
     /* Muted versions */
-    --pink-muted: #9E3A5C;
-    --cyan-muted: #2A8A8F;
+    --lime-muted: #5A9A3D;
+    --teal-muted: #2A8A7A;
     
     /* Typography */
     --font-display: 'Anton', 'Impact', sans-serif;
@@ -72,7 +71,7 @@
 html {
     scroll-behavior: smooth;
     scrollbar-width: thin;
-    scrollbar-color: var(--neon-pink) var(--black);
+    scrollbar-color: var(--neon-lime) var(--black);
 }
 
 body {
@@ -94,11 +93,11 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-    background: var(--neon-pink);
+    background: var(--neon-lime);
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: var(--neon-cyan);
+    background: var(--neon-teal);
 }
 
 /* --------------------- Texture Overlays --------------------- */
@@ -110,7 +109,7 @@ body {
     height: 100%;
     pointer-events: none;
     z-index: 9998;
-    background-image: url('images/bg-texture.jpg');
+    background-image: url('../images/bg-texture.jpg');
     background-size: cover;
     background-position: center;
     opacity: 0.06;
@@ -179,8 +178,8 @@ body {
 }
 
 .nav-logo:hover {
-    color: var(--neon-pink);
-    text-shadow: 0 0 15px var(--neon-pink);
+    color: var(--neon-lime);
+    text-shadow: 0 0 15px var(--neon-lime);
 }
 
 .nav-toggle {
@@ -204,7 +203,7 @@ body {
 
 .nav-toggle.active span:nth-child(1) {
     transform: rotate(45deg) translate(5px, 5px);
-    background: var(--neon-pink);
+    background: var(--neon-lime);
 }
 
 .nav-toggle.active span:nth-child(2) {
@@ -213,7 +212,7 @@ body {
 
 .nav-toggle.active span:nth-child(3) {
     transform: rotate(-45deg) translate(5px, -5px);
-    background: var(--neon-pink);
+    background: var(--neon-lime);
 }
 
 .nav-links {
@@ -225,7 +224,7 @@ body {
     right: 0;
     background: rgba(10, 10, 10, 0.98);
     padding: var(--space-md);
-    border-bottom: 2px solid var(--neon-pink);
+    border-bottom: 2px solid var(--neon-lime);
 }
 
 .nav-links.active {
@@ -247,8 +246,8 @@ body {
 
 .nav-links a:hover,
 .nav-links a.active {
-    color: var(--neon-cyan);
-    text-shadow: 0 0 10px var(--neon-cyan);
+    color: var(--neon-teal);
+    text-shadow: 0 0 10px var(--neon-teal);
 }
 
 @media (min-width: 768px) {
@@ -284,7 +283,7 @@ body {
     overflow: hidden;
     background: 
         linear-gradient(180deg, rgba(10, 10, 10, 0.6) 0%, rgba(10, 10, 10, 0.85) 100%),
-        url('images/bg-tunnel.jpg');
+        url('../images/bg-tunnel.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -332,14 +331,14 @@ body {
 }
 
 .glitch::before {
-    color: var(--neon-cyan);
+    color: var(--neon-teal);
     animation: glitch-harsh 0.4s infinite linear alternate-reverse;
     clip-path: polygon(0 0, 100% 0, 100% 35%, 0 35%);
     transform: translate(-3px, -2px);
 }
 
 .glitch::after {
-    color: var(--neon-pink);
+    color: var(--neon-lime);
     animation: glitch-harsh 0.4s infinite linear alternate-reverse reverse;
     clip-path: polygon(0 65%, 100% 65%, 100% 100%, 0 100%);
     transform: translate(3px, 2px);
@@ -364,7 +363,7 @@ body {
 .tagline {
     font-family: var(--font-raw);
     font-size: var(--text-xl);
-    color: var(--neon-pink);
+    color: var(--neon-lime);
     margin-top: var(--space-md);
     transform: rotate(-2deg);
     text-shadow: 2px 2px 0 var(--black);
@@ -405,27 +404,27 @@ body {
 
 .btn-primary {
     color: var(--black);
-    background: var(--neon-pink);
-    border-color: var(--neon-pink);
+    background: var(--neon-lime);
+    border-color: var(--neon-lime);
 }
 
 .btn-primary:hover {
     background: transparent;
-    color: var(--neon-pink);
+    color: var(--neon-lime);
     box-shadow: 
-        0 0 25px var(--neon-pink),
+        0 0 25px var(--neon-lime),
         inset 0 0 25px rgba(255, 45, 106, 0.1);
 }
 
 .btn-secondary {
-    color: var(--neon-cyan);
-    border-color: var(--neon-cyan);
+    color: var(--neon-teal);
+    border-color: var(--neon-teal);
 }
 
 .btn-secondary:hover {
-    background: var(--neon-cyan);
+    background: var(--neon-teal);
     color: var(--black);
-    box-shadow: 0 0 25px var(--neon-cyan);
+    box-shadow: 0 0 25px var(--neon-teal);
 }
 
 .btn-large {
@@ -461,8 +460,8 @@ section {
     left: 0;
     width: 100%;
     height: 3px;
-    background: var(--neon-pink);
-    box-shadow: 0 0 15px var(--neon-pink);
+    background: var(--neon-lime);
+    box-shadow: 0 0 15px var(--neon-lime);
 }
 
 .squiggle-underline {
@@ -530,9 +529,9 @@ section {
 }
 
 .featured-card:hover .card-frame {
-    border-color: var(--neon-pink);
+    border-color: var(--neon-lime);
     box-shadow: 
-        6px 6px 0 var(--neon-pink),
+        6px 6px 0 var(--neon-lime),
         0 0 40px rgba(255, 45, 106, 0.2);
 }
 
@@ -614,7 +613,7 @@ section {
 .vibe-section {
     background: 
         linear-gradient(180deg, rgba(10, 10, 10, 0.8) 0%, rgba(20, 20, 20, 0.9) 100%),
-        url('images/bg-corridor.jpg');
+        url('../images/bg-corridor.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -651,9 +650,9 @@ section {
 }
 
 .vibe-text .highlight {
-    color: var(--neon-cyan);
+    color: var(--neon-teal);
     font-weight: 700;
-    text-shadow: 0 0 10px var(--neon-cyan);
+    text-shadow: 0 0 10px var(--neon-teal);
 }
 
 .vibe-visual {
@@ -691,8 +690,8 @@ section {
     transform: translate(-50%, -50%);
     font-family: var(--font-stencil);
     font-size: var(--text-base);
-    color: var(--neon-cyan);
-    text-shadow: 0 0 15px var(--neon-cyan);
+    color: var(--neon-teal);
+    text-shadow: 0 0 15px var(--neon-teal);
     animation: blink-harsh 0.6s infinite;
 }
 
@@ -710,8 +709,8 @@ section {
 .commission-cta {
     background: var(--concrete);
     text-align: center;
-    border-top: 3px solid var(--neon-pink);
-    border-bottom: 3px solid var(--neon-cyan);
+    border-top: 3px solid var(--neon-lime);
+    border-bottom: 3px solid var(--neon-teal);
 }
 
 .cta-content h2 {
@@ -784,7 +783,7 @@ section {
     align-items: center;
     gap: var(--space-xs);
     font-size: var(--text-base);
-    color: var(--neon-cyan);
+    color: var(--neon-teal);
     text-decoration: none;
     text-transform: uppercase;
     letter-spacing: 0.1em;
@@ -792,8 +791,8 @@ section {
 }
 
 .social-link:hover {
-    color: var(--neon-pink);
-    text-shadow: 0 0 15px var(--neon-pink);
+    color: var(--neon-lime);
+    text-shadow: 0 0 15px var(--neon-lime);
 }
 
 .footer-copy p {

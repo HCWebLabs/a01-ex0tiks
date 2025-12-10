@@ -1,0 +1,358 @@
+/* =====================================================
+   a01.ex0tiks - Shop Styles
+   ===================================================== */
+
+/* --------------------- Page Header --------------------- */
+.page-header {
+    padding: calc(var(--space-2xl) + 60px) var(--space-md) var(--space-xl);
+    text-align: center;
+    background: linear-gradient(180deg, var(--charcoal) 0%, var(--purple-deep) 100%);
+    position: relative;
+}
+
+.page-header::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--yellow), var(--pink-hot), var(--cyan));
+}
+
+.page-header h1 {
+    font-family: var(--font-display);
+    font-size: var(--text-3xl);
+    color: var(--off-white);
+    text-shadow: 
+        3px 3px 0 var(--yellow),
+        6px 6px 0 var(--pink-hot);
+    margin-bottom: var(--space-sm);
+}
+
+.page-header p {
+    font-size: var(--text-lg);
+    color: var(--pink-soft);
+}
+
+/* --------------------- Shop Notice --------------------- */
+.shop-notice {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-sm);
+    padding: var(--space-md);
+    background: var(--purple-mid);
+    border-bottom: 2px solid var(--yellow);
+    text-align: center;
+    flex-wrap: wrap;
+}
+
+.notice-icon {
+    font-size: var(--text-xl);
+    color: var(--yellow);
+    animation: pulse 2s infinite ease-in-out;
+}
+
+.shop-notice p {
+    font-size: var(--text-sm);
+    color: var(--off-white);
+}
+
+.shop-notice strong {
+    color: var(--yellow);
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+}
+
+/* --------------------- Shop Grid --------------------- */
+.shop-section {
+    padding: var(--space-xl) var(--space-md);
+    min-height: 50vh;
+}
+
+.shop-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-lg);
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+@media (min-width: 600px) {
+    .shop-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 900px) {
+    .shop-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* --------------------- Shop Cards --------------------- */
+.shop-card {
+    position: relative;
+    background: var(--purple-mid);
+    border: 3px solid var(--off-white);
+    transition: var(--transition-base);
+}
+
+.shop-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 
+        0 10px 30px rgba(0, 0, 0, 0.3),
+        5px 5px 0 var(--pink-hot);
+}
+
+.shop-card.available:hover {
+    border-color: var(--lime);
+}
+
+.shop-card.sold {
+    opacity: 0.8;
+}
+
+.shop-card.sold:hover {
+    transform: none;
+    box-shadow: none;
+}
+
+/* Card Badge */
+.card-badge {
+    position: absolute;
+    top: var(--space-sm);
+    right: var(--space-sm);
+    font-family: var(--font-body);
+    font-size: var(--text-xs);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    padding: 0.3em 0.8em;
+    background: var(--lime);
+    color: var(--charcoal);
+    z-index: 10;
+}
+
+.card-badge.sold-badge {
+    background: var(--red-deep);
+    color: var(--off-white);
+}
+
+/* Card Frame */
+.shop-card .card-frame {
+    position: relative;
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+    background: var(--charcoal);
+}
+
+.shop-card .card-frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: var(--transition-slow);
+}
+
+.shop-card.available:hover .card-frame img {
+    transform: scale(1.05);
+}
+
+/* Sold Overlay */
+.sold-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(26, 26, 46, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sold-overlay span {
+    font-family: var(--font-display);
+    font-size: var(--text-2xl);
+    color: var(--red-deep);
+    transform: rotate(-15deg);
+    text-shadow: 2px 2px 0 var(--off-white);
+}
+
+/* Card Details */
+.card-details {
+    padding: var(--space-md);
+    text-align: center;
+}
+
+.card-details h3 {
+    font-family: var(--font-display);
+    font-size: var(--text-lg);
+    color: var(--off-white);
+    margin-bottom: var(--space-xs);
+}
+
+.card-description {
+    font-size: var(--text-sm);
+    color: var(--pink-soft);
+    margin-bottom: var(--space-xs);
+    line-height: 1.5;
+}
+
+.card-size {
+    font-size: var(--text-xs);
+    color: var(--purple-light);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.card-price {
+    font-family: var(--font-display);
+    font-size: var(--text-xl);
+    color: var(--lime);
+    margin: var(--space-sm) 0;
+}
+
+.card-price.sold-price {
+    color: var(--purple-light);
+    text-decoration: line-through;
+}
+
+.shop-card .btn {
+    width: 100%;
+}
+
+.btn-sold {
+    display: inline-block;
+    width: 100%;
+    font-family: var(--font-body);
+    font-size: var(--text-sm);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    padding: var(--space-sm) var(--space-md);
+    background: var(--purple-deep);
+    color: var(--purple-light);
+    border: 2px solid var(--purple-light);
+    cursor: not-allowed;
+}
+
+/* --------------------- Placeholder Card --------------------- */
+.placeholder-card {
+    border-style: dashed;
+    border-color: var(--purple-light);
+    min-height: 400px;
+}
+
+.placeholder-card:hover {
+    transform: none;
+    box-shadow: none;
+}
+
+.placeholder-content {
+    width: 100%;
+    height: 100%;
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, var(--purple-deep) 0%, var(--charcoal) 100%);
+    padding: var(--space-lg);
+}
+
+.placeholder-icon {
+    font-size: var(--text-3xl);
+    color: var(--purple-light);
+    opacity: 0.5;
+    margin-bottom: var(--space-sm);
+}
+
+.placeholder-content p {
+    font-size: var(--text-base);
+    color: var(--purple-light);
+    text-align: center;
+}
+
+/* --------------------- Shop Info Section --------------------- */
+.shop-info {
+    padding: var(--space-xl) var(--space-md);
+    background: var(--purple-deep);
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-md);
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+    .info-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.info-card {
+    text-align: center;
+    padding: var(--space-md);
+}
+
+.info-icon {
+    font-size: var(--text-2xl);
+    display: block;
+    margin-bottom: var(--space-sm);
+}
+
+.info-card h3 {
+    font-family: var(--font-display);
+    font-size: var(--text-base);
+    color: var(--off-white);
+    margin-bottom: var(--space-xs);
+}
+
+.info-card p {
+    font-size: var(--text-sm);
+    color: var(--pink-soft);
+    line-height: 1.6;
+}
+
+.info-card a {
+    color: var(--cyan);
+    text-decoration: none;
+    transition: var(--transition-base);
+}
+
+.info-card a:hover {
+    color: var(--pink-hot);
+    text-decoration: underline;
+}
+
+/* --------------------- Shop CTA --------------------- */
+.shop-cta {
+    padding: var(--space-2xl) var(--space-md);
+    text-align: center;
+    background: linear-gradient(180deg, var(--charcoal) 0%, var(--purple-deep) 100%);
+}
+
+.shop-cta h2 {
+    font-family: var(--font-display);
+    font-size: var(--text-2xl);
+    color: var(--off-white);
+    margin-bottom: var(--space-sm);
+    text-shadow: 2px 2px 0 var(--cyan);
+}
+
+.shop-cta p {
+    font-size: var(--text-lg);
+    color: var(--pink-soft);
+    margin-bottom: var(--space-lg);
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}

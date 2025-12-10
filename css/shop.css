@@ -1,12 +1,16 @@
 /* =====================================================
-   a01.ex0tiks - Shop Styles
+   a01.ex0tiks - Shop Styles (GRUNGE)
    ===================================================== */
 
 /* --------------------- Page Header --------------------- */
 .page-header {
     padding: calc(var(--space-2xl) + 60px) var(--space-md) var(--space-xl);
     text-align: center;
-    background: linear-gradient(180deg, var(--charcoal) 0%, var(--purple-deep) 100%);
+    background: 
+        linear-gradient(180deg, rgba(10, 10, 10, 0.85) 0%, rgba(20, 20, 20, 0.95) 100%),
+        url('images/bg-texture.jpg');
+    background-size: cover;
+    background-position: center;
     position: relative;
 }
 
@@ -17,22 +21,23 @@
     left: 0;
     right: 0;
     height: 3px;
-    background: linear-gradient(90deg, var(--yellow), var(--pink-hot), var(--cyan));
+    background: linear-gradient(90deg, var(--neon-yellow), var(--neon-pink));
+    box-shadow: 0 0 15px var(--neon-yellow);
 }
 
 .page-header h1 {
-    font-family: var(--font-display);
+    font-family: var(--font-stencil);
     font-size: var(--text-3xl);
     color: var(--off-white);
-    text-shadow: 
-        3px 3px 0 var(--yellow),
-        6px 6px 0 var(--pink-hot);
-    margin-bottom: var(--space-sm);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
 }
 
 .page-header p {
     font-size: var(--text-lg);
-    color: var(--pink-soft);
+    color: var(--grey-light);
+    font-family: var(--font-raw);
+    margin-top: var(--space-sm);
 }
 
 /* --------------------- Shop Notice --------------------- */
@@ -42,36 +47,32 @@
     justify-content: center;
     gap: var(--space-sm);
     padding: var(--space-md);
-    background: var(--purple-mid);
-    border-bottom: 2px solid var(--yellow);
+    background: var(--charcoal);
+    border-bottom: 2px solid var(--neon-yellow);
     text-align: center;
     flex-wrap: wrap;
 }
 
 .notice-icon {
     font-size: var(--text-xl);
-    color: var(--yellow);
-    animation: pulse 2s infinite ease-in-out;
+    color: var(--neon-yellow);
 }
 
 .shop-notice p {
     font-size: var(--text-sm);
-    color: var(--off-white);
+    color: var(--cream);
 }
 
 .shop-notice strong {
-    color: var(--yellow);
-}
-
-@keyframes pulse {
-    0%, 100% { transform: scale(1); }
-    50% { transform: scale(1.2); }
+    color: var(--neon-yellow);
+    text-shadow: 0 0 10px var(--neon-yellow);
 }
 
 /* --------------------- Shop Grid --------------------- */
 .shop-section {
     padding: var(--space-xl) var(--space-md);
     min-height: 50vh;
+    background: var(--black);
 }
 
 .shop-grid {
@@ -97,24 +98,22 @@
 /* --------------------- Shop Cards --------------------- */
 .shop-card {
     position: relative;
-    background: var(--purple-mid);
-    border: 3px solid var(--off-white);
+    background: var(--charcoal);
+    border: 2px solid var(--grey-mid);
     transition: var(--transition-base);
 }
 
 .shop-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 
-        0 10px 30px rgba(0, 0, 0, 0.3),
-        5px 5px 0 var(--pink-hot);
+    transform: translate(-4px, -4px);
+    box-shadow: 6px 6px 0 var(--neon-green);
 }
 
 .shop-card.available:hover {
-    border-color: var(--lime);
+    border-color: var(--neon-green);
 }
 
 .shop-card.sold {
-    opacity: 0.8;
+    opacity: 0.7;
 }
 
 .shop-card.sold:hover {
@@ -127,19 +126,18 @@
     position: absolute;
     top: var(--space-sm);
     right: var(--space-sm);
-    font-family: var(--font-body);
+    font-family: var(--font-stencil);
     font-size: var(--text-xs);
-    font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.1em;
     padding: 0.3em 0.8em;
-    background: var(--lime);
-    color: var(--charcoal);
+    background: var(--neon-green);
+    color: var(--black);
     z-index: 10;
 }
 
 .card-badge.sold-badge {
-    background: var(--red-deep);
+    background: var(--grey-mid);
     color: var(--off-white);
 }
 
@@ -148,7 +146,7 @@
     position: relative;
     aspect-ratio: 1 / 1;
     overflow: hidden;
-    background: var(--charcoal);
+    background: var(--concrete);
 }
 
 .shop-card .card-frame img {
@@ -156,10 +154,12 @@
     height: 100%;
     object-fit: cover;
     transition: var(--transition-slow);
+    filter: grayscale(20%) contrast(1.1);
 }
 
 .shop-card.available:hover .card-frame img {
     transform: scale(1.05);
+    filter: grayscale(0%) contrast(1.15);
 }
 
 /* Sold Overlay */
@@ -169,18 +169,18 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(26, 26, 46, 0.7);
+    background: rgba(10, 10, 10, 0.8);
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 .sold-overlay span {
-    font-family: var(--font-display);
+    font-family: var(--font-stencil);
     font-size: var(--text-2xl);
-    color: var(--red-deep);
+    color: var(--neon-pink);
     transform: rotate(-15deg);
-    text-shadow: 2px 2px 0 var(--off-white);
+    text-shadow: 0 0 20px var(--neon-pink);
 }
 
 /* Card Details */
@@ -190,7 +190,7 @@
 }
 
 .card-details h3 {
-    font-family: var(--font-display);
+    font-family: var(--font-raw);
     font-size: var(--text-lg);
     color: var(--off-white);
     margin-bottom: var(--space-xs);
@@ -198,28 +198,30 @@
 
 .card-description {
     font-size: var(--text-sm);
-    color: var(--pink-soft);
+    color: var(--grey-light);
     margin-bottom: var(--space-xs);
     line-height: 1.5;
 }
 
 .card-size {
     font-size: var(--text-xs);
-    color: var(--purple-light);
+    color: var(--grey-mid);
     text-transform: uppercase;
     letter-spacing: 0.1em;
 }
 
 .card-price {
-    font-family: var(--font-display);
+    font-family: var(--font-stencil);
     font-size: var(--text-xl);
-    color: var(--lime);
+    color: var(--neon-green);
     margin: var(--space-sm) 0;
+    text-shadow: 0 0 10px var(--neon-green);
 }
 
 .card-price.sold-price {
-    color: var(--purple-light);
+    color: var(--grey-mid);
     text-decoration: line-through;
+    text-shadow: none;
 }
 
 .shop-card .btn {
@@ -229,22 +231,21 @@
 .btn-sold {
     display: inline-block;
     width: 100%;
-    font-family: var(--font-body);
+    font-family: var(--font-stencil);
     font-size: var(--text-sm);
-    font-weight: 700;
     text-transform: uppercase;
-    letter-spacing: 0.1em;
+    letter-spacing: 0.15em;
     padding: var(--space-sm) var(--space-md);
-    background: var(--purple-deep);
-    color: var(--purple-light);
-    border: 2px solid var(--purple-light);
+    background: var(--grey-dark);
+    color: var(--grey-mid);
+    border: 2px solid var(--grey-dark);
     cursor: not-allowed;
 }
 
 /* --------------------- Placeholder Card --------------------- */
 .placeholder-card {
     border-style: dashed;
-    border-color: var(--purple-light);
+    border-color: var(--grey-dark);
     min-height: 400px;
 }
 
@@ -261,34 +262,34 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(135deg, var(--purple-deep) 0%, var(--charcoal) 100%);
+    background: var(--charcoal);
     padding: var(--space-lg);
 }
 
 .placeholder-icon {
-    font-size: var(--text-3xl);
-    color: var(--purple-light);
-    opacity: 0.5;
+    font-size: var(--text-2xl);
+    color: var(--grey-dark);
     margin-bottom: var(--space-sm);
 }
 
 .placeholder-content p {
     font-size: var(--text-base);
-    color: var(--purple-light);
+    color: var(--grey-dark);
     text-align: center;
 }
 
 /* --------------------- Shop Info Section --------------------- */
 .shop-info {
     padding: var(--space-xl) var(--space-md);
-    background: var(--purple-deep);
+    background: var(--charcoal);
+    border-top: 1px solid var(--grey-dark);
 }
 
 .info-grid {
     display: grid;
     grid-template-columns: 1fr;
     gap: var(--space-md);
-    max-width: 1000px;
+    max-width: 900px;
     margin: 0 auto;
 }
 
@@ -301,56 +302,60 @@
 .info-card {
     text-align: center;
     padding: var(--space-md);
+    border: 1px solid var(--grey-dark);
+    background: var(--concrete);
 }
 
 .info-icon {
-    font-size: var(--text-2xl);
+    font-size: var(--text-xl);
     display: block;
     margin-bottom: var(--space-sm);
 }
 
 .info-card h3 {
-    font-family: var(--font-display);
+    font-family: var(--font-stencil);
     font-size: var(--text-base);
     color: var(--off-white);
+    text-transform: uppercase;
     margin-bottom: var(--space-xs);
 }
 
 .info-card p {
     font-size: var(--text-sm);
-    color: var(--pink-soft);
+    color: var(--grey-light);
     line-height: 1.6;
 }
 
 .info-card a {
-    color: var(--cyan);
+    color: var(--neon-cyan);
     text-decoration: none;
     transition: var(--transition-base);
 }
 
 .info-card a:hover {
-    color: var(--pink-hot);
-    text-decoration: underline;
+    color: var(--neon-pink);
+    text-shadow: 0 0 10px var(--neon-pink);
 }
 
 /* --------------------- Shop CTA --------------------- */
 .shop-cta {
     padding: var(--space-2xl) var(--space-md);
     text-align: center;
-    background: linear-gradient(180deg, var(--charcoal) 0%, var(--purple-deep) 100%);
+    background: var(--black);
+    border-top: 3px solid var(--neon-cyan);
 }
 
 .shop-cta h2 {
-    font-family: var(--font-display);
+    font-family: var(--font-stencil);
     font-size: var(--text-2xl);
     color: var(--off-white);
+    text-transform: uppercase;
     margin-bottom: var(--space-sm);
-    text-shadow: 2px 2px 0 var(--cyan);
 }
 
 .shop-cta p {
     font-size: var(--text-lg);
-    color: var(--pink-soft);
+    color: var(--grey-light);
     margin-bottom: var(--space-lg);
     max-width: 500px;
     margin-left: auto;

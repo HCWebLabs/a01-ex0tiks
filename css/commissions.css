@@ -1,12 +1,16 @@
 /* =====================================================
-   a01.ex0tiks - Commissions Styles
+   a01.ex0tiks - Commissions Styles (GRUNGE)
    ===================================================== */
 
 /* --------------------- Page Header --------------------- */
 .page-header {
     padding: calc(var(--space-2xl) + 60px) var(--space-md) var(--space-xl);
     text-align: center;
-    background: linear-gradient(180deg, var(--charcoal) 0%, var(--purple-deep) 100%);
+    background: 
+        linear-gradient(180deg, rgba(10, 10, 10, 0.85) 0%, rgba(20, 20, 20, 0.95) 100%),
+        url('images/bg-tunnel.jpg');
+    background-size: cover;
+    background-position: center;
     position: relative;
 }
 
@@ -17,22 +21,22 @@
     left: 0;
     right: 0;
     height: 3px;
-    background: linear-gradient(90deg, var(--cyan), var(--pink-hot), var(--lime));
+    background: linear-gradient(90deg, var(--neon-cyan), var(--neon-pink));
+    box-shadow: 0 0 15px var(--neon-cyan);
 }
 
 .page-header h1 {
-    font-family: var(--font-display);
+    font-family: var(--font-stencil);
     font-size: var(--text-3xl);
     color: var(--off-white);
-    text-shadow: 
-        3px 3px 0 var(--cyan),
-        6px 6px 0 var(--pink-hot);
-    margin-bottom: var(--space-sm);
+    text-transform: uppercase;
 }
 
 .page-header p {
     font-size: var(--text-lg);
-    color: var(--pink-soft);
+    color: var(--grey-light);
+    font-family: var(--font-raw);
+    margin-top: var(--space-sm);
 }
 
 /* --------------------- Commission Page Layout --------------------- */
@@ -40,6 +44,7 @@
     max-width: 1000px;
     margin: 0 auto;
     padding: var(--space-xl) var(--space-md);
+    background: var(--black);
 }
 
 .commission-page section {
@@ -47,12 +52,12 @@
 }
 
 .commission-page h2 {
-    font-family: var(--font-display);
+    font-family: var(--font-stencil);
     font-size: var(--text-2xl);
     color: var(--off-white);
     text-align: center;
+    text-transform: uppercase;
     margin-bottom: var(--space-lg);
-    text-shadow: 2px 2px 0 var(--pink-hot);
 }
 
 /* --------------------- How It Works --------------------- */
@@ -75,55 +80,55 @@
 }
 
 .step {
-    background: var(--purple-mid);
+    background: var(--charcoal);
     padding: var(--space-md);
-    border: 2px solid var(--purple-light);
+    border: 1px solid var(--grey-dark);
     text-align: center;
     transition: var(--transition-base);
-    position: relative;
 }
 
 .step:hover {
-    border-color: var(--cyan);
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    border-color: var(--neon-cyan);
+    box-shadow: 4px 4px 0 var(--neon-cyan);
+    transform: translate(-2px, -2px);
 }
 
 .step-number {
-    font-family: var(--font-display);
+    font-family: var(--font-stencil);
     font-size: var(--text-2xl);
-    color: var(--cyan);
+    color: var(--neon-cyan);
     display: block;
     margin-bottom: var(--space-sm);
+    text-shadow: 0 0 10px var(--neon-cyan);
 }
 
 .step h3 {
-    font-family: var(--font-display);
+    font-family: var(--font-stencil);
     font-size: var(--text-base);
     color: var(--off-white);
+    text-transform: uppercase;
     margin-bottom: var(--space-xs);
 }
 
 .step p {
     font-size: var(--text-sm);
-    color: var(--pink-soft);
+    color: var(--grey-light);
     line-height: 1.6;
 }
 
 /* --------------------- Pricing Info --------------------- */
 .pricing-info {
-    background: var(--purple-deep);
+    background: var(--charcoal);
     padding: var(--space-xl);
-    border: 3px solid var(--yellow);
+    border: 2px solid var(--neon-yellow);
     text-align: center;
 }
 
 .pricing-content > p {
     font-size: var(--text-base);
-    color: var(--off-white);
+    color: var(--cream);
     max-width: 600px;
     margin: 0 auto var(--space-lg);
-    line-height: 1.7;
 }
 
 .price-ranges {
@@ -141,38 +146,37 @@
 }
 
 .price-item {
-    background: var(--charcoal);
+    background: var(--concrete);
     padding: var(--space-md);
-    border: 2px solid var(--purple-light);
+    border: 1px solid var(--grey-dark);
 }
 
 .price-item .size {
     display: block;
     font-size: var(--text-sm);
-    color: var(--pink-soft);
+    color: var(--grey-light);
     margin-bottom: var(--space-xs);
     text-transform: uppercase;
-    letter-spacing: 0.1em;
 }
 
 .price-item .price {
-    font-family: var(--font-display);
+    font-family: var(--font-stencil);
     font-size: var(--text-lg);
-    color: var(--lime);
+    color: var(--neon-green);
+    text-shadow: 0 0 8px var(--neon-green);
 }
 
 .pricing-note {
     font-size: var(--text-xs);
-    color: var(--purple-light);
+    color: var(--grey-mid);
     margin-top: var(--space-md);
-    font-style: italic;
 }
 
 /* --------------------- Commission Form --------------------- */
 .commission-form-section {
-    background: var(--purple-mid);
+    background: var(--charcoal);
     padding: var(--space-xl);
-    border: 3px solid var(--pink-hot);
+    border: 2px solid var(--neon-pink);
 }
 
 .commission-form {
@@ -199,13 +203,11 @@
 }
 
 .form-group label {
-    font-family: var(--font-body);
+    font-family: var(--font-stencil);
     font-size: var(--text-sm);
-    font-weight: 700;
     color: var(--off-white);
     margin-bottom: var(--space-xs);
     text-transform: uppercase;
-    letter-spacing: 0.05em;
 }
 
 .form-group input,
@@ -214,37 +216,32 @@
     font-family: var(--font-body);
     font-size: var(--text-base);
     color: var(--off-white);
-    background: var(--charcoal);
-    border: 2px solid var(--purple-light);
+    background: var(--concrete);
+    border: 1px solid var(--grey-dark);
     padding: var(--space-sm);
     transition: var(--transition-base);
 }
 
 .form-group input::placeholder,
 .form-group textarea::placeholder {
-    color: var(--purple-light);
+    color: var(--grey-mid);
 }
 
 .form-group input:focus,
 .form-group select:focus,
 .form-group textarea:focus {
     outline: none;
-    border-color: var(--cyan);
-    box-shadow: 0 0 10px rgba(0, 196, 212, 0.3);
+    border-color: var(--neon-cyan);
+    box-shadow: 0 0 10px rgba(0, 240, 255, 0.2);
 }
 
 .form-group select {
     cursor: pointer;
     appearance: none;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%237B4BA2' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%236B6B6B' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
     background-repeat: no-repeat;
     background-position: right 12px center;
     padding-right: 40px;
-}
-
-.form-group select option {
-    background: var(--charcoal);
-    color: var(--off-white);
 }
 
 .form-group textarea {
@@ -252,7 +249,7 @@
     min-height: 120px;
 }
 
-/* Checkbox styling */
+/* Checkbox */
 .checkbox-group {
     margin-top: var(--space-sm);
 }
@@ -263,99 +260,68 @@
     gap: var(--space-sm);
     cursor: pointer;
     font-size: var(--text-sm);
-    color: var(--off-white);
-    text-transform: none;
-    letter-spacing: normal;
-    font-weight: 400;
+    color: var(--grey-light);
 }
 
 .checkbox-label input[type="checkbox"] {
     position: absolute;
     opacity: 0;
-    cursor: pointer;
 }
 
 .checkbox-custom {
-    width: 24px;
-    height: 24px;
-    min-width: 24px;
-    background: var(--charcoal);
-    border: 2px solid var(--purple-light);
+    width: 20px;
+    height: 20px;
+    min-width: 20px;
+    background: var(--concrete);
+    border: 1px solid var(--grey-mid);
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: var(--transition-base);
 }
 
 .checkbox-label input:checked ~ .checkbox-custom {
-    background: var(--cyan);
-    border-color: var(--cyan);
+    background: var(--neon-cyan);
+    border-color: var(--neon-cyan);
 }
 
 .checkbox-custom::after {
     content: '✓';
-    color: var(--charcoal);
+    color: var(--black);
     font-weight: bold;
+    font-size: 12px;
     opacity: 0;
-    transition: var(--transition-fast);
 }
 
 .checkbox-label input:checked ~ .checkbox-custom::after {
     opacity: 1;
 }
 
-.checkbox-text {
-    line-height: 1.5;
-}
-
-/* Error states */
 .input-error {
-    border-color: var(--pink-hot) !important;
-    animation: shake 0.3s ease;
-}
-
-@keyframes shake {
-    0%, 100% { transform: translateX(0); }
-    25% { transform: translateX(-5px); }
-    75% { transform: translateX(5px); }
+    border-color: var(--neon-pink) !important;
 }
 
 .error-message {
     font-size: var(--text-xs);
-    color: var(--pink-hot);
+    color: var(--neon-pink);
     margin-top: var(--space-xs);
 }
 
-/* Submit button */
 .commission-form .btn {
     grid-column: 1 / -1;
     justify-self: center;
     margin-top: var(--space-md);
 }
 
-/* Success state */
 .form-success {
     text-align: center;
     padding: var(--space-xl);
-    animation: fadeIn 0.5s ease;
-}
-
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
 }
 
 .form-success .success-icon {
-    font-size: 4rem;
-    color: var(--cyan);
+    font-size: 3rem;
+    color: var(--neon-cyan);
     display: block;
     margin-bottom: var(--space-md);
-    animation: bounce 1s infinite ease-in-out;
-}
-
-@keyframes bounce {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-15px); }
 }
 
 .form-success p {
@@ -363,11 +329,7 @@
     color: var(--off-white);
 }
 
-/* --------------------- FAQ Section --------------------- */
-.faq-section {
-    padding-top: var(--space-xl);
-}
-
+/* --------------------- FAQ --------------------- */
 .faq-grid {
     display: grid;
     grid-template-columns: 1fr;
@@ -381,20 +343,21 @@
 }
 
 .faq-item {
-    background: var(--purple-deep);
+    background: var(--charcoal);
     padding: var(--space-md);
-    border-left: 4px solid var(--cyan);
+    border-left: 3px solid var(--neon-cyan);
 }
 
 .faq-item h3 {
-    font-family: var(--font-display);
+    font-family: var(--font-stencil);
     font-size: var(--text-base);
     color: var(--off-white);
+    text-transform: uppercase;
     margin-bottom: var(--space-xs);
 }
 
 .faq-item p {
     font-size: var(--text-sm);
-    color: var(--pink-soft);
+    color: var(--grey-light);
     line-height: 1.6;
 }

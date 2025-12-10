@@ -1,12 +1,16 @@
 /* =====================================================
-   a01.ex0tiks - Contact Page Styles
+   a01.ex0tiks - Contact Page Styles (GRUNGE)
    ===================================================== */
 
 /* --------------------- Page Header --------------------- */
 .page-header {
     padding: calc(var(--space-2xl) + 60px) var(--space-md) var(--space-xl);
     text-align: center;
-    background: linear-gradient(180deg, var(--charcoal) 0%, var(--purple-deep) 100%);
+    background: 
+        linear-gradient(180deg, rgba(10, 10, 10, 0.85) 0%, rgba(20, 20, 20, 0.95) 100%),
+        url('images/bg-texture.jpg');
+    background-size: cover;
+    background-position: center;
     position: relative;
 }
 
@@ -17,22 +21,22 @@
     left: 0;
     right: 0;
     height: 3px;
-    background: linear-gradient(90deg, var(--pink-hot), var(--yellow), var(--lime));
+    background: linear-gradient(90deg, var(--neon-pink), var(--neon-yellow));
+    box-shadow: 0 0 15px var(--neon-pink);
 }
 
 .page-header h1 {
-    font-family: var(--font-display);
+    font-family: var(--font-stencil);
     font-size: var(--text-3xl);
     color: var(--off-white);
-    text-shadow: 
-        3px 3px 0 var(--pink-hot),
-        6px 6px 0 var(--yellow);
-    margin-bottom: var(--space-sm);
+    text-transform: uppercase;
 }
 
 .page-header p {
     font-size: var(--text-lg);
-    color: var(--pink-soft);
+    color: var(--grey-light);
+    font-family: var(--font-raw);
+    margin-top: var(--space-sm);
 }
 
 /* --------------------- Contact Page Layout --------------------- */
@@ -40,6 +44,7 @@
     max-width: 900px;
     margin: 0 auto;
     padding: var(--space-xl) var(--space-md);
+    background: var(--black);
 }
 
 .contact-page section {
@@ -53,22 +58,22 @@
 }
 
 .contact-intro h2 {
-    font-family: var(--font-display);
+    font-family: var(--font-stencil);
     font-size: var(--text-2xl);
     color: var(--off-white);
+    text-transform: uppercase;
     margin-bottom: var(--space-sm);
-    text-shadow: 2px 2px 0 var(--cyan);
 }
 
 .contact-intro p {
     font-size: var(--text-base);
-    color: var(--pink-soft);
+    color: var(--grey-light);
     max-width: 600px;
     margin: 0 auto;
     line-height: 1.7;
 }
 
-/* Contact Methods Grid */
+/* Contact Cards */
 .contact-methods {
     display: grid;
     grid-template-columns: 1fr;
@@ -81,70 +86,70 @@
     }
 }
 
-/* Contact Cards */
 .contact-card {
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
     padding: var(--space-lg);
-    background: var(--purple-mid);
-    border: 3px solid var(--purple-light);
+    background: var(--charcoal);
+    border: 2px solid var(--grey-dark);
     text-decoration: none;
     transition: var(--transition-base);
 }
 
 .contact-card:hover {
-    transform: translateY(-8px);
-    border-color: var(--pink-hot);
-    box-shadow: 
-        0 15px 30px rgba(0, 0, 0, 0.3),
-        5px 5px 0 var(--pink-hot);
+    transform: translate(-4px, -4px);
+    border-color: var(--neon-pink);
+    box-shadow: 6px 6px 0 var(--neon-pink);
 }
 
 .contact-card.instagram:hover {
-    border-color: var(--cyan);
-    box-shadow: 
-        0 15px 30px rgba(0, 0, 0, 0.3),
-        5px 5px 0 var(--cyan);
+    border-color: var(--neon-cyan);
+    box-shadow: 6px 6px 0 var(--neon-cyan);
 }
 
 .contact-card.commissions:hover {
-    border-color: var(--lime);
-    box-shadow: 
-        0 15px 30px rgba(0, 0, 0, 0.3),
-        5px 5px 0 var(--lime);
+    border-color: var(--neon-green);
+    box-shadow: 6px 6px 0 var(--neon-green);
 }
 
 .contact-icon {
-    font-size: var(--text-3xl);
+    font-size: var(--text-2xl);
     margin-bottom: var(--space-sm);
+    filter: grayscale(50%);
+    transition: var(--transition-base);
+}
+
+.contact-card:hover .contact-icon {
+    filter: grayscale(0%);
 }
 
 .contact-card h3 {
-    font-family: var(--font-display);
+    font-family: var(--font-stencil);
     font-size: var(--text-lg);
     color: var(--off-white);
+    text-transform: uppercase;
     margin-bottom: var(--space-xs);
 }
 
 .contact-detail {
     font-size: var(--text-sm);
-    color: var(--cyan);
+    color: var(--neon-cyan);
     margin-bottom: var(--space-sm);
     word-break: break-all;
 }
 
 .contact-cta {
     font-size: var(--text-xs);
-    color: var(--pink-soft);
+    color: var(--grey-mid);
     text-transform: uppercase;
     letter-spacing: 0.1em;
     transition: var(--transition-base);
 }
 
 .contact-card:hover .contact-cta {
-    color: var(--pink-hot);
+    color: var(--off-white);
 }
 
 /* --------------------- Response Section --------------------- */
@@ -154,34 +159,36 @@
 }
 
 .response-box {
-    background: var(--purple-deep);
+    background: var(--charcoal);
     padding: var(--space-lg);
-    border-left: 4px solid var(--yellow);
+    border-left: 3px solid var(--neon-yellow);
     max-width: 500px;
     text-align: center;
 }
 
 .response-icon {
-    font-size: var(--text-2xl);
+    font-size: var(--text-xl);
     display: block;
     margin-bottom: var(--space-sm);
 }
 
 .response-box h3 {
-    font-family: var(--font-display);
+    font-family: var(--font-stencil);
     font-size: var(--text-base);
     color: var(--off-white);
+    text-transform: uppercase;
     margin-bottom: var(--space-xs);
 }
 
 .response-box p {
     font-size: var(--text-sm);
-    color: var(--pink-soft);
+    color: var(--grey-light);
     line-height: 1.6;
 }
 
 .response-box strong {
-    color: var(--yellow);
+    color: var(--neon-yellow);
+    text-shadow: 0 0 8px var(--neon-yellow);
 }
 
 /* --------------------- Location Section --------------------- */
@@ -192,43 +199,44 @@
 .location-content {
     display: inline-block;
     padding: var(--space-md) var(--space-xl);
-    background: var(--purple-mid);
-    border: 2px dashed var(--purple-light);
+    background: var(--charcoal);
+    border: 1px dashed var(--grey-dark);
 }
 
 .location-icon {
-    font-size: var(--text-xl);
+    font-size: var(--text-lg);
     display: block;
     margin-bottom: var(--space-xs);
 }
 
 .location-content p {
     font-size: var(--text-base);
-    color: var(--off-white);
+    color: var(--cream);
 }
 
 .location-content strong {
-    color: var(--lime);
+    color: var(--neon-green);
 }
 
 .location-sub {
     font-size: var(--text-sm);
-    color: var(--pink-soft);
+    color: var(--grey-mid);
     margin-top: var(--space-xs);
 }
 
 /* --------------------- Vibe Check Section --------------------- */
 .vibe-check-section {
     padding: var(--space-xl);
-    background: var(--purple-mid);
-    border: 3px solid var(--cyan);
+    background: var(--charcoal);
+    border: 2px solid var(--neon-cyan);
 }
 
 .vibe-check-section h2 {
-    font-family: var(--font-display);
+    font-family: var(--font-stencil);
     font-size: var(--text-xl);
     color: var(--off-white);
     text-align: center;
+    text-transform: uppercase;
     margin-bottom: var(--space-lg);
 }
 
@@ -251,22 +259,23 @@
     align-items: center;
     gap: var(--space-xs);
     padding: var(--space-sm);
-    background: var(--purple-deep);
+    background: var(--concrete);
+    border: 1px solid var(--grey-dark);
 }
 
 .vibe-check-item span {
-    font-size: var(--text-base);
+    font-size: var(--text-sm);
 }
 
 .vibe-check-item p {
     font-size: var(--text-sm);
-    color: var(--off-white);
+    color: var(--cream);
 }
 
 .vibe-check-item.no {
-    opacity: 0.6;
+    opacity: 0.5;
 }
 
 .vibe-check-item.no p {
-    color: var(--purple-light);
+    color: var(--grey-mid);
 }
